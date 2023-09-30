@@ -27,8 +27,8 @@ app.use(expressLayouts)
 
 //import routes
 const indexRouter = require('./routes/index')
-const activitesRouter = require('./routes/activites')
-const categoriesRouter = require('./routes/categories')
+const activityRouter = require('./routes/activites')
+const categoryRouter = require('./routes/categories')
 
 //mount route
 app.use('/', indexRouter)

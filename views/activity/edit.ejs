@@ -1,0 +1,54 @@
+<h1> Update Activity </h1>
+
+<br>
+
+<form method="POST" action="/activity/update?_method=PUT">
+
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container">
+<div class="items">
+
+
+<label>Name</label>
+<input class="form-control" type="text" name="actName" value="<%= activity.actName %>"/>
+
+<br>
+
+<label>Decription</label>
+<textarea class="form-control" name="actDesc"><%= activity.actDesc %></textarea>
+
+<br>
+
+<label>Date</label>
+<input class="form-control" type="date" name="date" value="<%= activity.date %>">
+
+<br>
+
+<label>Time</label>
+<input class="form-control" type="time" name="time" value="<%= activity.time %>">
+
+<br>
+
+<label>Place</label>
+<input class="form-control" type="text" name="place" value="<%= activity.place %>">
+
+<br>
+
+<label>categories</label>
+<select name="category[]" multiple="multiple" id="category" class="form-control">
+  <% activity.category.forEach(function(category) { %>
+  <option value="<%= category._id %>"><%= category.catgName %></option>
+  <% }) %>
+</select>
+
+<br>
+
+<input type="hidden" name="id" value="<%= activity._id %>" />
+
+<br>
+
+<button type="submit" class="btn btn-secondary">Update Activity</button>
+
+</div>
+</div>
+
+</form>

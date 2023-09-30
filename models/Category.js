@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
 const categorySchema = mongoose.Schema({
-  name: String,
-  description: String,
+  catgName: String,
+  catgDesc: String,
   activity: [
     {
       type: mongoose.Schema.Types.ObjectId,

@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
 const activitySchema = mongoose.Schema({
-  name: String,
-  description: String,
+  actName: String,
+  actDesc: String,
   date: String,
   time: String,
   place: String,
