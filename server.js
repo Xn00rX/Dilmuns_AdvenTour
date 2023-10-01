@@ -25,17 +25,34 @@ app.set('view engine', 'ejs')
 // Look in views folder for a file named as layout.ejs
 app.use(expressLayouts)
 
-//Passport
+//Passport & Session
+let session = require('express-session')
 let passport = require('./helper/ppConfig')
 
+app.use(
+  session({
+    secret: process.env.SECRET,
+    saveUninitialized: true,
+    resave: false,
+    cookie: { maxAge: 36000000 }
+  })
+)
 //Initialize passport
 app.use(passport.initialize())
+app.use(passport.session())
 
+//load user info in all ejs pages
+app.use(function (req, res, next) {
+  res.locals.currentUser = req.user
+  next()
+})
 //Routes
 const authRouter = require('./routes/auth')
+const userRouter = require('./routes/users')
 
 //Mount Router
 app.use('/', authRouter)
+app.use('/', userRouter)
 
 app.listen(port, () => {
   console.log('Its working')

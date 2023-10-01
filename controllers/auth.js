@@ -33,8 +33,9 @@ exports.auth_login_get = (req, res) => {
   res.render('auth/login.ejs')
 }
 
+//To post Login Data - HTTP Post
 exports.auth_login_post = passport.authenticate('local', {
-  successRedirect: '/',
+  successRedirect: `/user/detail`,
   failureRedirect: 'auth/login'
 })
 
