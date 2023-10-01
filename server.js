@@ -25,11 +25,21 @@ app.set('view engine', 'ejs')
 // Look in views folder for a file named as layout.ejs
 app.use(expressLayouts)
 
+//Passport
+let passport = require('./helper/ppConfig')
+
+//Initialize passport
+app.use(passport.initialize())
+
 //Routes
 const authRouter = require('./routes/auth')
 
 //Mount Router
 app.use('/', authRouter)
+
+app.listen(port, () => {
+  console.log('Its working')
+})
 
 //MongooseDB
 mongoose
@@ -43,7 +53,3 @@ mongoose
   .catch((err) => {
     console.log('MongoDB not Connected' + err)
   })
-
-app.listen(port, () => {
-  console.log('Its working')
-})

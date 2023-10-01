@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const bcrypt = require('bcryptjs')
 
 const userSchema = mongoose.Schema({
   firstName: {
@@ -14,7 +15,7 @@ const userSchema = mongoose.Schema({
     maxLength: [70, 'Last name is too long']
   },
   phoneNumber: {
-    type: String,
+    type: Number,
     required: true,
     minLength: [8, 'number does not exist'],
     maxLength: [30, 'number does not exist']
@@ -31,6 +32,13 @@ const userSchema = mongoose.Schema({
     minLength: [8, 'password is weak']
   }
 })
+
+// Verify password
+userSchema.methods.verifyPassword = function (password) {
+  console.log('password', password)
+  console.log('this.password', this.password)
+  return bcrypt.compareSync(password, this.password)
+}
 
 const User = mongoose.model('User', userSchema)
 module.exports = User
