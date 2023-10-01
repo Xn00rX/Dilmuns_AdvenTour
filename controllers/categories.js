@@ -21,6 +21,20 @@ exports.category_index = (req, res) => {
     })
 }
 
+exports.category_all = (req, res) => {
+  Category.find().then((categories) => {
+    res.render('category/all', { categories })
+  })
+}
+
+exports.category_each_activity = (req, res) => {
+  Category.findById(req.query.id)
+    .populate('activity')
+    .then((category) => {
+      res.render('category/eachactivity', { category })
+    })
+}
+
 exports.category_show = (req, res) => {
   Category.findById(req.query.id)
     .populate('activity')

@@ -16,6 +16,9 @@ const app = express()
 //Look for static file here (CSS/JS/Image/Video)
 app.use(express.static("public"))
 
+//Require Multer
+const multer = require("multer")
+
 //Port configuration
 const port = process.env.PORT
 
@@ -25,12 +28,19 @@ app.set("view engine", "ejs")
 // Look in views folder for a file named as layout.ejs
 app.use(expressLayouts)
 
+//Passport
+let passport = require("./helper/ppConfig")
+
+//Initialize passport
+app.use(passport.initialize())
+
 //import routes
 const indexRouter = require("./routes/index")
 const activityRouter = require("./routes/activites")
 const categoryRouter = require("./routes/categories")
 const reviewRouter = require("./routes/reviews")
 const bookRouter = require("./routes/book")
+const authRouter = require("./routes/auth")
 
 //mount route
 app.use("/", indexRouter)
@@ -38,6 +48,7 @@ app.use("/", activityRouter)
 app.use("/", categoryRouter)
 app.use("/", reviewRouter)
 app.use("/", bookRouter)
+app.use("/", authRouter)
 
 //listen for requests on port
 
