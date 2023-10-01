@@ -1,0 +1,17 @@
+<h1>Edit Review</h1>
+
+<form method="POST" action="/review/edit?_method=PUT">
+  <div>
+    <label>Comment</label>
+    <textarea name="comment">
+      <%= review.comment %>
+    </textarea>
+  </div>
+
+
+<input type="hidden" name="id" value="<%= review._id%>"/>
+
+  <div>
+    <button type="submit">Update Review</button>
+  </div>
+</form>

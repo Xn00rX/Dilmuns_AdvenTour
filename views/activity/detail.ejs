@@ -1,0 +1,35 @@
+<h1> Activity Details</h1>
+
+<br>
+
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container">
+<div class="items">
+
+<strong>Name:</strong><%= activity.actName %>
+
+<br>
+
+<strong>Description:</strong><%= activity.actDesc %>
+
+<br>
+
+<strong>Date:</strong><%= activity.date %>
+
+<br>
+
+<strong>Time:</strong><%= activity.time %>
+
+<br>
+
+<strong>Place:</strong><%= activity.place %>
+
+<br>
+
+<strong> category: </strong>
+
+  <% activity.category.forEach((category) => { %>
+      <%= category.catgName %>
+  <% }) %>
+
+</div>
+</div>

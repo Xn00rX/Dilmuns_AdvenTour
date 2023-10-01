@@ -1,0 +1,10 @@
+<% category.activity.forEach((activity) => { %>
+
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container">
+<a href="/activity/detail?id=<%= activity._id %>">
+
+<%= activity.actName %></a>
+    
+</div>
+
+<% }) %>

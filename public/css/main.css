@@ -1,0 +1,44 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  }
+
+.form-container {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.items {
+  align-self: stretch;
+  width: 550px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  font-family: arial;
+  font-weight: bold;
+  background-color: #212529;
+}
+
+
+li a {
+  display: block;
+  float: left;
+  padding: 15px 15px;
+  color: white;
+  text-decoration: none;
+}
+

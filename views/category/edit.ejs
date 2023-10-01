@@ -1,0 +1,29 @@
+<h1> Update Category </h1>
+
+<br>
+
+<form method="POST" action="/category/update?_method=PUT">
+
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container">
+<div class="items">
+
+<label>Name</label>
+<input class="form-control" type="text" name="catgName" value="<%= category.catgName %>"/>
+
+<br>
+
+<label>Description</label>
+<textarea class="form-control" name="catgDesc" value="<%= category.catgDesc %>"/></textarea>
+
+<br>
+
+<input type="hidden" name="id" value="<%= category._id %>" />
+
+<br>
+
+<button type="submit" class="btn btn-secondary">Update Category</button>
+
+</div>
+</div>
+
+</form>
