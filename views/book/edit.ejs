@@ -1,0 +1,27 @@
+<h1>Edit</h1>
+
+<form method="POST" action="/book/edit?_method=PUT">
+
+  <div>
+    <label>Number of Tickets</label>
+    <input type="text" name="noOfTickets" value="<%= book.noOfTickets%>">
+  </div>
+
+  <div>
+    <label>Date</label>
+    <input type="date" name="date" value="<%= book.date%>">
+  </div>
+
+  <div>
+    <label>Time</label>
+    <input type="time" name="time" value="<%= book.time%>">
+  </div>
+
+  <input type="hidden" name="id" value="<%= book._id%>"/>
+
+
+  <div>
+    <button type="submit" name="book">Book</button>
+  </div>
+</form>
+
