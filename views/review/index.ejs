@@ -1,0 +1,23 @@
+<h1>Reviews</h1>
+
+<table>
+
+<tr>
+  <th>Review</th>
+  <th>Date</th>
+  <th>Edit</th>
+  <th>Delete</th>
+</tr>  
+
+<%reviews.forEach((review)=>{%>
+
+  <tr>
+    <td><%= review.comment%></td>
+    <td><%= moment(review.updatedAt).fromNow() %></td>
+    <td><a href="/review/edit?id=<%=review._id%>">Edit</a></td>
+    <td><a href="/review/delete?id=<%= review._id %>">Delete</a></td>
+  </tr>
+
+
+<%}) %>
+</table>
