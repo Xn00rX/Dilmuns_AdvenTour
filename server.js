@@ -13,7 +13,7 @@ const expressLayouts = require("express-ejs-layouts")
 //Invoke express functionality
 const app = express()
 
-//Look for static file in public
+//Look for static file here (CSS/JS/Image/Video)
 app.use(express.static("public"))
 
 //Port configuration
@@ -25,26 +25,34 @@ app.set("view engine", "ejs")
 // Look in views folder for a file named as layout.ejs
 app.use(expressLayouts)
 
-// Import Routes
+//import routes
+const indexRouter = require("./routes/index")
+const activityRouter = require("./routes/activites")
+const categoryRouter = require("./routes/categories")
 const reviewRouter = require("./routes/reviews")
 const bookRouter = require("./routes/book")
 
-//Mount Routes
+//mount route
+app.use("/", indexRouter)
+app.use("/", activityRouter)
+app.use("/", categoryRouter)
 app.use("/", reviewRouter)
 app.use("/", bookRouter)
+
 //listen for requests on port
+
 app.listen(port, () => {
-  console.log(`app is running on port ${port}`)
+  console.log(`DilmunsAT is running on port ${port}`)
 })
 
-//MongoDB conncetion
+//MongoDB Connection
 mongoose
   .connect(process.env.mongoDBURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("MongoBD is connected")
+    console.log("MongoDB connected")
   })
   .catch((err) => {
     console.log("MongoDB is not connected" + err)

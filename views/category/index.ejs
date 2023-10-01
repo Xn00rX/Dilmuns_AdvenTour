@@ -1,0 +1,28 @@
+<table class="table">
+<thead class="table-dark">
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+  <th> Activity</th>
+  <th> Edit</th>
+  <th> Delete</th>
+</thead>
+</tr>
+
+<% categories.forEach(function(category) { %>
+  
+<tr>
+  <td> <a href="/category/detail?id=<%= category._id %>">
+  <%= category.catgName %> </td>
+  <td> <%= category.catgDesc %></td>
+  <td> <% category.activity.forEach((activity) => { %>
+         <%= activity.actName %> <br>
+         <% }) %></td>
+  <td> <a href="/category/edit?id=<%= category._id %>"> Edit </a></td>
+  <td> <a href="/category/delete?id=<%= category._id %>"> Delete </a></td> 
+
+</tr>
+
+<% }) %>
+
+</table>
