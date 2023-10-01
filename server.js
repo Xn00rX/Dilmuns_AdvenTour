@@ -32,11 +32,15 @@ app.use(expressLayouts)
 const indexRouter = require('./routes/index')
 const activityRouter = require('./routes/activites')
 const categoryRouter = require('./routes/categories')
+const reviewRouter = require('./routes/reviews')
+const bookRouter = require('./routes/book')
 
 //mount route
 app.use('/', indexRouter)
 app.use('/', activityRouter)
 app.use('/', categoryRouter)
+app.use('/', reviewRouter)
+app.use('/', bookRouter)
 
 //listen for requests on port
 

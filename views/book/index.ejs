@@ -1,0 +1,25 @@
+<h1>Books</h1>
+
+<table>
+
+<tr>
+  <th>Number Of Tickets</th>
+  <th>Date</th>
+  <th>Time</th>
+  <th>Edit</th>
+  <th>Delete</th>
+</tr>  
+
+<%books.forEach((book)=>{%>
+
+  <tr>
+    <td><%= book.noOfTickets%></td>
+    <td><%= book.date %></td>
+    <td><%= book.time %></td>
+    <td><a href="/book/edit?id=<%=book._id%>">Edit</a></td>
+    <td><a href="/book/delete?id=<%= book._id %>">Delete</a></td>
+  </tr>
+
+
+<%}) %>
+</table>

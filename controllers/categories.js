@@ -28,10 +28,10 @@ exports.category_all = (req, res) => {
 }
 
 exports.category_each_activity = (req, res) => {
-  Category.find()
+  Category.findById(req.query.id)
     .populate('activity')
-    .then((categories) => {
-      res.render('category/eachactivity', { categories })
+    .then((category) => {
+      res.render('category/eachactivity', { category })
     })
 }
 
