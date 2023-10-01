@@ -1,0 +1,49 @@
+<h1> Add A New Activity </h1>
+
+<br>
+
+<form method="POST" action="/activity/add">
+
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container">
+<div class="items">
+
+<label>Name</label>
+<input class="form-control" type="text" name="actName" />
+
+<br>
+
+<label>Description</label>
+<textarea class="form-control" name="actDesc"></textarea>
+
+<br>
+
+<label>Date</label>
+<input class="form-control" type="date" name="date">
+
+<br>
+
+<label>Time</label>
+<input class="form-control" type="time" name="time" >
+
+<br>
+
+<label>Place</label>
+<input class="form-control" type="text" name="place" >
+
+<br>
+
+<label>Categories</label>
+<select name="category[]" multiple="multiple" id="category" class="form-control">
+      <% categories.forEach(function(category) { %>
+      <option value="<%= category._id %>"><%= category.catgName %></option>
+      <% }) %>
+</select>
+
+<br>
+
+<button class="btn btn-secondary" type="submit">Add Activity</button>
+
+</div>
+</div>
+
+</form>
