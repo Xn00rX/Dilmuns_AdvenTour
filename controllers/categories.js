@@ -7,7 +7,13 @@ exports.category_create = (req, res) => {
 }
 
 exports.category_post = (req, res) => {
+  console.log(req.body)
+  console.log(req.file)
+
   let categories = new Category(req.body)
+  categories.profileImage = '/uploads/' + req.file.filename
+  console.log('category.profileImage')
+
   categories.save().then(() => {
     res.redirect('/category/index')
   })
