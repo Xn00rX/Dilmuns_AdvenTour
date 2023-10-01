@@ -29,6 +29,12 @@ exports.activity_index = (req, res) => {
     })
 }
 
+exports.activity_all = (req, res) => {
+  Activity.find().then((activites) => {
+    res.render('activity/all', { activites })
+  })
+}
+
 exports.activity_show = (req, res) => {
   Activity.findById(req.query.id)
     .populate('category')

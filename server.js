@@ -16,6 +16,9 @@ const app = express()
 //Look for static file here (CSS/JS/Image/Video)
 app.use(express.static('public'))
 
+//Require Multer
+const multer = require('multer')
+
 //Port configuration
 const port = process.env.PORT
 
