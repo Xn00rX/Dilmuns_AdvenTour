@@ -31,12 +31,13 @@ exports.review_create_post = (req, res) => {
 
   let review = new Review({
     comment: req.body.comment,
-    activity: req.body.id,
+    activity: req.body.activityId,
     user: req.body.userId,
   })
   console.log(req.body.userId)
   review.save().then(() => {
-    res.redirect("/activity/index")
+    // res.redirect("/activity/index")
+    res.redirect(`/activity/detail?id=${req.body.activityId}`)
   })
 }
 
@@ -73,7 +74,7 @@ exports.review_edit_get = (req, res) => {
 exports.review_edit_post = (req, res) => {
   Review.findByIdAndUpdate(req.body.id, req.body)
     .then(() => {
-      res.redirect("/review/index")
+      res.redirect(`/activity/detail?id=${req.body.activityId}`)
     })
     .catch((err) => {
       console.log(err)

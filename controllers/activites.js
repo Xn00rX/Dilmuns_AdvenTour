@@ -18,7 +18,7 @@ exports.activity_post = (req, res) => {
 
   let activity = new Activity(req.body)
 
-  activites.activityImage = "/uploads/" + req.file.filename
+  activity.activityImage = "/uploads/" + req.file.filename
   console.log("activity.activityImage")
 
   activity.save().then(() => {
