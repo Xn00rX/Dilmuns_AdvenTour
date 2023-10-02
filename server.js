@@ -29,11 +29,27 @@ app.set('view engine', 'ejs')
 // Look in views folder for a file named as layout.ejs
 app.use(expressLayouts)
 
-//Passport
+//Passport & Session
+let session = require('express-session')
 let passport = require('./helper/ppConfig')
 
+app.use(
+  session({
+    secret: process.env.SECRET,
+    saveUninitialized: true,
+    resave: false,
+    cookie: { maxAge: 36000000 }
+  })
+)
 //Initialize passport
 app.use(passport.initialize())
+app.use(passport.session())
+
+//load user info in all ejs pages
+app.use(function (req, res, next) {
+  res.locals.currentUser = req.user
+  next()
+})
 
 //import routes
 const indexRouter = require('./routes/index')
@@ -42,6 +58,7 @@ const categoryRouter = require('./routes/categories')
 const reviewRouter = require('./routes/reviews')
 const bookRouter = require('./routes/book')
 const authRouter = require('./routes/auth')
+const userRouter = require('./routes/users')
 
 //mount route
 app.use('/', indexRouter)
@@ -50,8 +67,7 @@ app.use('/', categoryRouter)
 app.use('/', reviewRouter)
 app.use('/', bookRouter)
 app.use('/', authRouter)
-
-//listen for requests on port
+app.use('/', userRouter)
 
 app.listen(port, () => {
   console.log(`DilmunsAT is running on port ${port}`)

@@ -15,7 +15,7 @@
 <tr>
   <td> <a href="/category/detail?id=<%= category._id %>">
   <%= category.catgName %> </td>
-  <td> <img class="category-icon" src= " <%= category.profileImage %>"  </td>
+  <td> <img class="category-icon" src= " <%= category.profileImage %>">  </td>
   <td> <%= category.catgDesc %></td>
   <td> <% category.activity.forEach((activity) => { %>
          <%= activity.actName %> <br>

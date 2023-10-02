@@ -13,15 +13,22 @@ exports.auth_register_get = (req, res) => {
 
 //Signup data in database - HTTP POST
 exports.auth_register_post = (req, res) => {
+  console.log(req.file)
+
   let user = User(req.body)
+  user.userImage = '/uploads/' + req.file.filename
+
   console.log(req.body)
   let hash = bcrypt.hashSync(req.body.password, salt)
   user.password = hash
   console.log(hash)
+
+  console.log('user.userImage')
+
   user
     .save()
     .then(() => {
-      res.redirect('/auth/login')
+      res.redirect('/category/index')
     })
     .catch((err) => {
       console.log(err)
@@ -33,8 +40,9 @@ exports.auth_login_get = (req, res) => {
   res.render('auth/login.ejs')
 }
 
+//To post Login Data - HTTP Post
 exports.auth_login_post = passport.authenticate('local', {
-  successRedirect: '/',
+  successRedirect: `/user/detail`,
   failureRedirect: 'auth/login'
 })
 
@@ -44,6 +52,6 @@ exports.auth_logout_get = (req, res) => {
     if (err) {
       return next(err)
     }
-    res.redirect('auth/login')
+    res.redirect('/auth/login')
   })
 }

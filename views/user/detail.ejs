@@ -1,0 +1,22 @@
+<h1>Profile</h1>
+
+<div>
+  First Name: <%= currentUser.firstName %>
+</div>
+<div>
+  Last Name: <%= currentUser.lastName %>
+</div>
+<div>
+  Phone Number: <%= currentUser.phoneNumber %>
+</div>
+<div>
+  email: <%= currentUser.email %>
+</div>
+
+<div> Image: <img class="category-icon" src= " <%= currentUser.userImage %>" >  </div>
+
+
+<nav>
+  <a href="/user/edit">Edit Profile</a>
+  <a href="/user/changepassword">Change Password</a>
+</nav>
