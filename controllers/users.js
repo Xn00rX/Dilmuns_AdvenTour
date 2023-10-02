@@ -1,5 +1,6 @@
 const User = require('../models/User')
 const bcrypt = require('bcryptjs')
+const passport = require('../helper/ppConfig')
 const salt = 10
 
 //Load Current User Data - HTTP GET
@@ -38,11 +39,16 @@ exports.user_update_post = (req, res) => {
 }
 
 //Load change password form
-exports.user_changepass_get = (req, res) => {
-  res.render('user/changepassword')
+exports.user_changepass_get = async (req, res) => {
+  const user = await User.findById(req.user)
+  res.render('user/changepassword', { user })
 }
 
 //Apply Password Change
-exports.user_updatepassword_post = (req, res) => {
-  User.setPassword(User, passwordValid)
+exports.user_updatepassword_post = async (req, res) => {
+  let hash = bcrypt.hashSync(req.body.password, salt)
+  console.log(hash)
+  console.log('Password changed successfully, please re-login', req.user)
+  const user = await User.findByIdAndUpdate(req.user, { password: hash })
+  res.redirect('/')
 }
