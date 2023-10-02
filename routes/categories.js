@@ -32,7 +32,7 @@ router.get('/category/all', categoryCtrl.category_all)
 router.get('/category/eachactivity', categoryCtrl.category_each_activity)
 router.get('/category/detail', categoryCtrl.category_show)
 router.get('/category/edit', categoryCtrl.category_edit)
-router.put('/category/update', categoryCtrl.category_update)
+//router.put('/category/update', categoryCtrl.category_update)
 router.get('/category/delete', categoryCtrl.category_delete)
 
 //upload picture
@@ -40,6 +40,12 @@ router.post(
   '/category/add',
   upload.single('profileImage'),
   categoryCtrl.category_post
+)
+
+router.post(
+  '/category/update',
+  upload.single('profileImage'),
+  categoryCtrl.category_update
 )
 
 // , (req, res) => {
