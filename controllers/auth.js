@@ -1,14 +1,14 @@
 //API
 
 //Require the User model
-const User = require("../models/User")
-const bcrypt = require("bcryptjs")
-let passport = require("../helper/ppConfig")
+const User = require('../models/User')
+const bcrypt = require('bcryptjs')
+let passport = require('../helper/ppConfig')
 const salt = 10
 
 //Load register form - HTTP GET
 exports.auth_register_get = (req, res) => {
-  res.render("auth/register.ejs")
+  res.render('auth/register.ejs')
 }
 
 //Signup data in database - HTTP POST
@@ -21,7 +21,7 @@ exports.auth_register_post = (req, res) => {
   user
     .save()
     .then(() => {
-      res.redirect("/category/index")
+      res.redirect('/category/index')
     })
     .catch((err) => {
       console.log(err)
@@ -30,13 +30,13 @@ exports.auth_register_post = (req, res) => {
 
 //Load Login page - HTTP GET
 exports.auth_login_get = (req, res) => {
-  res.render("auth/login.ejs")
+  res.render('auth/login.ejs')
 }
 
 //To post Login Data - HTTP Post
-exports.auth_login_post = passport.authenticate("local", {
+exports.auth_login_post = passport.authenticate('local', {
   successRedirect: `/user/detail`,
-  failureRedirect: "auth/login",
+  failureRedirect: '/auth/login'
 })
 
 //To Log out and invalidate a users session
@@ -45,6 +45,6 @@ exports.auth_logout_get = (req, res) => {
     if (err) {
       return next(err)
     }
-    res.redirect("/auth/login")
+    res.redirect('/auth/login')
   })
 }
