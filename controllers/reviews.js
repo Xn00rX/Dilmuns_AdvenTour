@@ -1,22 +1,50 @@
-const Review = require("../models/Review")
+const Activity = require("../models/Activity")
+const User = require("../models/User")
+const { Review } = require("../models/Review")
 
 const moment = require("moment")
 
 exports.review_create_get = (req, res) => {
-  res.render("review/add")
-}
-
-exports.review_create_post = (req, res) => {
-  let review = new Review(req.body)
-  review
-    .save()
-    .then(() => {
-      res.redirect("/review/index")
+  User.find({ userId: User._id })
+    .then((user) => {
+      let activityId = req.query.id
+      console.log(req.query.id)
+      res.render("review/add", { activityId, user })
     })
     .catch((err) => {
       console.log(err)
-      res.send("Please try again later")
     })
+}
+
+exports.review_create_post = (req, res) => {
+  // let review = new Review(req.body)
+  // // Activity.findById(req.query.id).then()
+  // review
+  //   .save()
+  //   .then(() => {
+  //     res.redirect("/activity/detail")
+  //   })
+  //   .catch((err) => {
+  //     console.log(err)
+  //     res.send("Please try again later")
+  //   })
+
+  let review = new Review({
+    comment: req.body.comment,
+    activity: req.body.id,
+    user: req.body.userId,
+  })
+  console.log(req.body.userId)
+  review.save().then(() => {
+    // activity.save().then(() => {
+    // req.body.id.forEach((activity) => {
+
+    // })
+    res.redirect("/activity/index")
+    // })
+
+    // res.redirect(`/activity/index`)
+  })
 }
 
 exports.index_get = (req, res) => {

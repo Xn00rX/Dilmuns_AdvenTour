@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
+const { type } = require("os")
 
 const activitySchema = mongoose.Schema({
   actName: String,
@@ -9,11 +10,17 @@ const activitySchema = mongoose.Schema({
   category: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Category'
-    }
-  ]
+      ref: "Category",
+    },
+  ],
+  review: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Review",
+    },
+  ],
 })
 
-const Activity = mongoose.model('Activity', activitySchema)
+const Activity = mongoose.model("Activity", activitySchema)
 
 module.exports = { Activity }

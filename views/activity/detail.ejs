@@ -33,3 +33,36 @@
 
 </div>
 </div>
+
+
+<a href="/review/add?id=<%=activity._id%>"><button class="btn btn-secondary" type="submit">Add Review</button></a>
+<hr>
+
+<h1>Reviews</h1>
+
+<table>
+
+  <tr>
+    <th>Name</th>
+    <th>Comment</th>
+    <th>Date</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>  
+  
+  <% reviews.forEach((review) => { %>
+  
+    <tr>
+      <td><%= review.user.firstName%> <%= review.user.lastName%></td>
+      <td><%= review.comment%></td>
+      <td><%= moment(review.updatedAt).fromNow() %></td>
+      <% if(currentUser._id.equals(review.user._id)){ %>
+      <td><a href="/review/edit?id=<%=review._id%>">Edit</a></td>
+      <td><a href="/review/delete?id=<%= review._id %>">Delete</a></td>
+      <%}%>
+    </tr>
+  
+  
+  <%}) %>
+
+ </table>
