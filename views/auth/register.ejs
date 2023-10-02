@@ -1,6 +1,6 @@
 <h1>Register for an AdvenTour</h1>
 
-<form method="POST" action="/auth/register">
+<form method="POST" action="/auth/register" enctype="multipart/form-data">
 
 <div>
   <label> First Name</label>
@@ -25,6 +25,11 @@
 <div>
   <label> Password</label>
   <input type="password" name="password">
+</div>
+
+<div>
+<label>Image</label>
+<input class="form-control" type="file" name="userImage">
 </div>
 
 <div>
