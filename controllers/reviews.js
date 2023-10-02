@@ -54,7 +54,7 @@ exports.index_get = (req, res) => {
 exports.review_delete_get = (req, res) => {
   Review.findByIdAndDelete(req.query.id)
     .then(() => {
-      res.redirect("/review/index")
+      res.redirect(req.get("referer"))
     })
     .catch((err) => {
       console.log(err)
