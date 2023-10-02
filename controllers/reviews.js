@@ -36,14 +36,7 @@ exports.review_create_post = (req, res) => {
   })
   console.log(req.body.userId)
   review.save().then(() => {
-    // activity.save().then(() => {
-    // req.body.id.forEach((activity) => {
-
-    // })
     res.redirect("/activity/index")
-    // })
-
-    // res.redirect(`/activity/index`)
   })
 }
 

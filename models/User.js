@@ -31,18 +31,6 @@ const userSchema = mongoose.Schema({
     required: true,
     minLength: [8, "password is weak"],
   },
-  review: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Review",
-    },
-  ],
-  activity: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Activity",
-    },
-  ],
 })
 
 // Verify password

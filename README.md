@@ -14,3 +14,7 @@ Trello Board [Click Here](https://trello.com/b/lqVAmdB4/dilmuns-adventour)
 
 ## Wireframes
 ![WF](https://media.git.generalassemb.ly/user/50365/files/e7d6f931-093e-46b6-a39f-e69e4547323c)
+
+## Credits
+https://www.npmjs.com/package/multer?activeTab=readme
+https://www.youtube.com/watch?v=WqJ0P8JnftI&t=616s

@@ -7,16 +7,11 @@ const activitySchema = mongoose.Schema({
   date: String,
   time: String,
   place: String,
+  activityImage: String,
   category: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
-    },
-  ],
-  review: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Review",
     },
   ],
 })
