@@ -2,7 +2,7 @@
 
 <br>
 
-<form method="POST" action="/activity/add">
+<form method="POST" action="/activity/add" enctype="multipart/form-data">
 
 <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container">
 <div class="items">
@@ -38,6 +38,11 @@
       <option value="<%= category._id %>"><%= category.catgName %></option>
       <% }) %>
 </select>
+
+<br>
+
+<label>Image</label>
+<input class="form-control" type="file" name="activityImage">
 
 <br>
 

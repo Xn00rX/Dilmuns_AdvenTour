@@ -9,7 +9,14 @@ exports.activity_create = (req, res) => {
 }
 
 exports.activity_post = (req, res) => {
+  console.log(req.body)
+  console.log(req.file)
+
   let activity = new Activity(req.body)
+
+  activites.activityImage = '/uploads/' + req.file.filename
+  console.log('activity.activityImage')
+
   activity.save().then(() => {
     req.body.category.forEach((category) => {
       Category.findById(category).then((category) => {
@@ -52,7 +59,14 @@ exports.activity_edit = (req, res) => {
 }
 
 exports.activity_update = (req, res) => {
-  Activity.findByIdAndUpdate(req.body.id, req.body).then(() => {
+  console.log(req.body)
+  console.log(req.file)
+
+  Activity.findByIdAndUpdate(req.body.id, {
+    actName: req.body.actName,
+    actDesc: req.body.actDesc,
+    activityImage: '/uploads/' + req.file.filename
+  }).then(() => {
     res.redirect('/activity/index')
   })
 }

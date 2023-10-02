@@ -32,10 +32,9 @@ router.get('/category/all', categoryCtrl.category_all)
 router.get('/category/eachactivity', categoryCtrl.category_each_activity)
 router.get('/category/detail', categoryCtrl.category_show)
 router.get('/category/edit', categoryCtrl.category_edit)
-//router.put('/category/update', categoryCtrl.category_update)
 router.get('/category/delete', categoryCtrl.category_delete)
 
-//upload picture
+//upload and update picture new routes
 router.post(
   '/category/add',
   upload.single('profileImage'),
