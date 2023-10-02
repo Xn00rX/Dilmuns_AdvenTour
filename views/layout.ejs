@@ -16,13 +16,23 @@
 
 
 <ul>
-  <li><a href="/category/all">Categories</a></li>
-  <li><a href="/activity/all">Activites</a></li>
-  <li><a href="/auth/register">Register</a></li>
-  <li><a href="/auth/login">Login</a></li>
-  <li><a href="/review/add">Add review</a></li>
-  <li><a href="/book/add">Add book</a></li>
-  <li><a href="/auth/logout">Logout</a></li>
+
+  <% if(currentUser){%>
+    <li><a href="/category/all">Categories</a></li>
+      <li><a href="/activity/all">Activites</a></li>
+    <li><a href="/review/add">Add review</a></li>
+    <li><a href="/book/add">Add book</a></li>
+    <li><a href="/user/detail">Profile</a></li>
+    <li><a href="/auth/logout">Logout</a></li>
+    <%} else{%>
+      <li><a href="/category/all">Categories</a></li>
+      <li><a href="/activity/all">Activites</a></li>
+      <li><a href="/auth/register">Register</a></li>
+      <li><a href="/auth/login">Login</a></li>
+      <%}%>
+  
+ 
+  
 
 
   </ul>

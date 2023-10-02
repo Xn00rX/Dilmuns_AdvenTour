@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
+const { type } = require("os")
 
 const activitySchema = mongoose.Schema({
   actName: String,
@@ -6,14 +7,15 @@ const activitySchema = mongoose.Schema({
   date: String,
   time: String,
   place: String,
+  activityImage: String,
   category: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Category'
-    }
-  ]
+      ref: "Category",
+    },
+  ],
 })
 
-const Activity = mongoose.model('Activity', activitySchema)
+const Activity = mongoose.model("Activity", activitySchema)
 
 module.exports = { Activity }

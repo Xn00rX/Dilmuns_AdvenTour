@@ -29,7 +29,17 @@ exports.user_edit_get = (req, res) => {
 
 //Apply Changes - HTTP POST
 exports.user_update_post = (req, res) => {
-  User.findByIdAndUpdate(req.body.id, req.body)
+  console.log(req.body)
+  console.log(req.file)
+
+  User.findByIdAndUpdate(req.body.id, {
+    userImage: '/uploads/' + req.file.filename,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    phoneNumber: req.body.phoneNumber,
+    email: req.body.email,
+    password: req.body.password
+  })
     .then(() => {
       res.redirect('/user/detail')
     })

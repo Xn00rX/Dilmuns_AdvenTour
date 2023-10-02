@@ -15,6 +15,7 @@ const app = express()
 
 //Look for static file here (CSS/JS/Image/Video)
 app.use(express.static("public"))
+// app.use(express.static('uploads'))
 
 //Require Multer
 const multer = require("multer")
@@ -51,6 +52,7 @@ app.use(function (req, res, next) {
 })
 
 //import routes
+
 const indexRouter = require("./routes/index")
 const activityRouter = require("./routes/activites")
 const categoryRouter = require("./routes/categories")
