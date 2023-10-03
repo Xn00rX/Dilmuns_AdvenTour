@@ -232,6 +232,95 @@ li :hover{
   text-decoration: underline;
 }
 
+/* ACTIVITES CLIENT SIDE PAGE STYLING STARTS HERE */
+.actdetails-body {
+  background-image: url("/images/actdetails-bg.jpg");
+  background-size:auto;
+  background-repeat:repeat;
+  background-position: center;
+  margin:0;
+  padding: 0;
+}
+
+.details-heading {
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details-heading h1 {
+  color: white;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 70px;
+  
+ 
+}
+
+.actdetails-container {
+  background-color: #032540;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 85%;
+  height: 90%;
+  text-align: left;
+  margin-top: 5%;
+  margin-left: 7%;
+  margin-right: 5%;
+  padding: 10%;
+
+ 
+}
+
+.act-name {
+  font-family: Poppins;
+  color: white;
+  font-weight: 600;
+  font-size: 26px;
+  text-decoration: underline;
+  text-decoration-color:mediumturquoise;
+
+}
+
+.act-review {
+  font-family: Poppins;
+  color: white;
+  font-weight: 600;
+  font-size: 26px;
+
+}
+
+.act-description{
+  font-family: Poppins;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+
+}
+
+.activity-info{
+  font-family: Poppins;
+  font-weight: 200;
+  color: lightgray;
+  font-size: 15px;
+}
+
+.actdetails-items {
+  color: #fff;
+
+}
+
+.activity-container {
+  width: 35%;
+  height: 75%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 8%;
+
+  
+}
+
 /* ADMIN SIDE VIEWS STYLING STARTS HERE */
 
 .categoryadd-body {

@@ -1,46 +1,61 @@
-<h1> Activity Details</h1>
+<body class="actdetails-body">
+
+ <div class="details-heading"><h1>Sky is the limit when it comes to AdvenTours</h1></div>
 
 <br>
 
-<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container">
-<div class="items">
+  <div class="actdetails-container">
 
-<strong>Name:</strong><%= activity.actName %>
+<div class="actdetails-items">
+  <div class="shadow-lg p-3 mb-5 form-container activity-container" style="background-image: url(<%= activity.activityImage %>);"></div>
 
-<br>
 
-<strong>Description:</strong><%= activity.actDesc %>
-
-<br>
-
-<strong>Date:</strong><%= activity.date %>
+ <div class="act-name"><%= activity.actName %></div> 
+  <br>
+  <br>
+<div class="act-description"><%= activity.actDesc %></div>
 
 <br>
 
-<strong>Time:</strong><%= activity.time %>
+<div class="activity-info">
+Date: <%= activity.date %>
 
 <br>
 
-<strong>Place:</strong><%= activity.place %>
+Time: <%= activity.time %>
+
+<br>
+
+Place: <%= activity.place %>
 
 <br>
 <input type="hidden" name="activityId" value="<%= activity._id %>">
-<strong> category: </strong>
+ category: 
 
   <% activity.category.forEach((category) => { %>
       <%= category.catgName %>
   <% }) %>
 
-</div>
-</div>
+
 
 <% if(currentUser){ %>
 <a href="/review/add?id=<%=activity._id%>"><button class="btn btn-secondary" type="submit">Add Review</button></a>
 <a href="/book/add"><button class="btn btn-secondary" type="submit">Book</button></a>
 <%} %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <hr>
 
-<h1>Reviews</h1>
+<div class="act-review">Reviews</div>
 
 <table>
 
@@ -70,3 +85,9 @@
   <%}) %>
 
  </table>
+</div>
+</div>
+</div>
+
+
+</body>
