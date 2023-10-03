@@ -20,11 +20,10 @@
   <% if(currentUser){%>
     <li><a href="/category/all">Categories</a></li>
       <li><a href="/activity/all">Activites</a></li>
-    <li><a href="/review/add">Add review</a></li>
     <li><a href="/book/add">Add book</a></li>
     <li><a href="/user/detail">Profile</a></li>
     <li><a href="/auth/logout">Logout</a></li>
-    <%} else{%>
+    <%} else {%>
       <li><a href="/category/all">Categories</a></li>
       <li><a href="/activity/all">Activites</a></li>
       <li><a href="/auth/register">Register</a></li>
@@ -35,9 +34,15 @@
   
 
 
+
+      
+
   </ul>
 
 <br>
+
+<% if(currentUser){%>
+<% if(currentUser.Admin){ %>
 
 <ul>
   <li><a href="/category/index">View Categories</a></li>
@@ -45,6 +50,8 @@
   <li><a href="/activity/index">View Activites</a></li>
   <li><a href="/activity/add">Add Activity</a></li>
 </ul>
+<%} %>
+<%}%>
 
 <br>
 
