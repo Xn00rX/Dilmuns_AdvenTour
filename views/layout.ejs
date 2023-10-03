@@ -13,7 +13,19 @@
 </head>
 
 <body>
-
+  <% if(currentUser){%>
+    <% if(currentUser.Admin){ %>
+    <nav class="admin-nav">
+    <ul>
+      <li><a href="/category/index">View Categories</a></li>
+      <li><a href="/category/add">Add Category</a></li>
+      <li><a href="/activity/index">View Activites</a></li>
+      <li><a href="/activity/add">Add Activity</a></li>
+    </ul>
+    </nav>
+    <%} %>
+    <%}%>
+    
 <div>
   <nav>
 <ul>
@@ -43,21 +55,7 @@
   </nav>
 </div>
 
-<br>
 
-<% if(currentUser){%>
-<% if(currentUser.Admin){ %>
-
-<ul>
-  <li><a href="/category/index">View Categories</a></li>
-  <li><a href="/category/add">Add Category</a></li>
-  <li><a href="/activity/index">View Activites</a></li>
-  <li><a href="/activity/add">Add Activity</a></li>
-</ul>
-<%} %>
-<%}%>
-
-<br>
 
 <%- body %>
 

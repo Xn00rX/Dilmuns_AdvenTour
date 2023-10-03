@@ -358,13 +358,22 @@ li :hover{
 }
 
 /* ADMIN SIDE VIEWS STYLING STARTS HERE */
+.categoryadd-body{
+  
+  background-color: #111;
+}
 
-.categoryadd-body {
-  padding-left: 70px;
-  padding-right: 70px;
-  background-image: url("/images/bah2.jpg");
-} 
+.forms-container {
+  margin-top: 2%;
+  margin-bottom: 0;
+  color: black;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
+
+}
 
 .btn a {
   text-decoration: none;
@@ -391,5 +400,27 @@ li :hover{
 
 
 
-/* ADMIN SIDE VIEWS STYLING ENDS HERE */
+.admin-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.admin-nav li {
+  float: right;
+}
+
+.admin-nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.admin-nav li a:hover {
+  background-color: #111;
+}
 
