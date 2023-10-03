@@ -1,10 +1,12 @@
 <body class="reg-body">
-
-<h1>Register for an AdvenTour</h1>
+  <div class="form-container">
 
 <form method="POST" action="/auth/register" enctype="multipart/form-data">
-  <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container">
-    <div class="items">
+    <div class="form-items">
+
+      <h1>Register for AdvenTours</h1>
+      <br>
+
 <div>
   <label> First Name</label>
   <input class="form-control" type="text" name="firstName">
@@ -35,12 +37,18 @@
 <input class="form-control" type="file" name="userImage">
 </div>
 <br>
+
 <div>
-  <button class="btn btn-secondary" type="Submit">Register Now</button>
+  <button class=" btn btn-outline-light reg-btn" type="Submit">Register Now</button>
 </div>
 
 </div>
-</div>
 </form>
+</div>
+</body>
+
+
+  
+
 
 </body>

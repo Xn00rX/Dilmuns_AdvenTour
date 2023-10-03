@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Spinnaker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
 /* HOMEPAGE STYLING STARTS HERE */
 
 .background-clip {
@@ -53,6 +52,9 @@ nav .logo {
 
 
 }
+nav {
+  margin-bottom: 0;
+}
 
 .home-btn {
   font-family: Poppins;
@@ -71,12 +73,12 @@ nav .logo {
 
 ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
   overflow: hidden;
   margin-top: 3%;
   margin-left: 4%;
   margin-right: 4%;
+  margin-bottom: 0;
 
 }
 
@@ -93,12 +95,96 @@ li a {
   font-size: 20px;
   padding: 14px 16px;
   text-decoration: none;
+  text-shadow: 1px 1px 1px grey;
 }
 
 li :hover{
   text-decoration: underline;
 }
 /* HOMEPAGE STYLING ENDS HERE */
+
+/* REGISTER PAGE STYLING STARTS HERE */
+
+.reg-btn {
+  font-family: Poppins;
+  font-weight: 200;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #fff;
+  padding: 9px 33px;
+  border-radius: 47px;
+
+}
+
+.reg-body {
+  background-image: url("/images/reg-bg3.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin:0;
+  padding: 0;
+}
+
+.form-container {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: grid;
+  color: white;
+  width: 50%;
+  height: 100vh;
+  float: left;
+  object-fit: cover;
+  padding-left: 5%;
+  object-position: bottom;
+}
+
+.form-items {
+  width: 450px;
+}
+
+/* Login PAGE STYLING STARTS HERE */
+
+.login-btn {
+  font-family: Poppins;
+  font-weight: 200;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #fff;
+  padding: 9px 33px;
+  border-radius: 47px;
+
+}
+
+.login-body {
+  background-image: url("/images/reg-bg3.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin:0;
+  padding: 0;
+}
+
+.loginform-container {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: grid;
+  color: white;
+  width: 50%;
+  height: 100vh;
+  float: left;
+  object-fit: cover;
+  padding-left: 5%;
+  object-position: bottom;
+}
+
+.loginform-items {
+  width: 450px;
+}
+
 
 /* ADMIN SIDE VIEWS STYLING STARTS HERE */
 
@@ -108,41 +194,11 @@ li :hover{
   background-image: url("/images/bah2.jpg");
 } 
 
-.login-body {
-  padding-left: 70px;
-  padding-right: 70px;
-  background-image: url("/images/bah2.jpg");
-} 
-
-.reg-body {
-  background-image: url("/images/bah2.jpg");
-} 
-
-.reg-body h1{
-  font-family: Poppins;
-  font-weight: 500;
-  color: white;
-} 
-
 
 .btn a {
   text-decoration: none;
   color: white;
   }
-
-.form-container {
-  margin-top: 0;
-  margin-bottom: 0;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-}
-
-.items {
-  align-self: stretch;
-  width: 550px;
-}
 
 .category-cont {
   width: 1000px;
