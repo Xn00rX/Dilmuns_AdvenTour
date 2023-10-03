@@ -22,3 +22,30 @@
 </nav>
 
 <hr>
+
+
+<h1>Books</h1>
+
+<table>
+
+<tr>
+  <th>Name</th>
+  <th>Number</th>
+  <th>Number Of Tickets</th>
+  <th>Edit</th>
+  <th>Delete</th>
+</tr>  
+
+<%books.forEach((book)=>{%>
+
+  <tr>
+    <td><%= book.bookName %></td>
+    <td><%= book.bookNum %></td>
+    <td><%= book.noOfTickets%></td>
+    <td><a href="/book/edit?id=<%=book._id%>">Edit</a></td>
+    <td><a href="/book/delete?id=<%= book._id %>">Delete</a></td>
+  </tr>
+ 
+<%}) %>
+
+</table>
