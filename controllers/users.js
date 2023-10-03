@@ -28,7 +28,9 @@ exports.user_show_get = async (req, res) => {
   // })
 
   try {
-    const books = await Book.find({ user: req.user._id }).populate("user")
+    const books = await Book.find({ user: req.user._id })
+      .populate("user")
+      .populate("activity")
     res.render("user/detail", { books })
   } catch (err) {
     res.send(err.message)
@@ -76,8 +78,14 @@ exports.user_changepass_get = async (req, res) => {
 //Apply Password Change
 exports.user_updatepassword_post = async (req, res) => {
   let hash = bcrypt.hashSync(req.body.password, salt)
-  console.log(hash)
-  console.log("Password changed successfully, please re-login", req.user)
+  // console.log(hash)
+  // console.log("Password changed successfully, please re-login", req.user)
   const user = await User.findByIdAndUpdate(req.user, { password: hash })
-  res.redirect("/")
+  // res.redirect("/")
+  req.logout(function (err) {
+    if (err) {
+      return next(err)
+    }
+    res.redirect("/auth/login")
+  })
 }

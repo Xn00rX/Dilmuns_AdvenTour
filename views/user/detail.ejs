@@ -32,6 +32,7 @@
   <th>Name</th>
   <th>Number</th>
   <th>Number Of Tickets</th>
+  <th>Activity</th>
   <th>Edit</th>
   <th>Delete</th>
 </tr>  
@@ -42,6 +43,9 @@
     <td><%= book.bookName %></td>
     <td><%= book.bookNum %></td>
     <td><%= book.noOfTickets%></td>
+    <td>
+      <%= book.activity.actName %>
+    </td>
     <td><a href="/book/edit?id=<%=book._id%>">Edit</a></td>
     <td><a href="/book/delete?id=<%= book._id %>">Delete</a></td>
   </tr>
