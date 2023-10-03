@@ -301,6 +301,13 @@ li :hover{
 
  
 }
+.name-comment {
+  font-weight: 600;
+}
+
+.comment-time {
+  float: right;
+}
 
 .act-name {
   font-family: Poppins;
