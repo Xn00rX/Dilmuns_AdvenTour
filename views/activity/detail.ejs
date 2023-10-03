@@ -39,8 +39,11 @@ Place: <%= activity.place %>
 
 
 <% if(currentUser){ %>
-<a href="/review/add?id=<%=activity._id%>"><button class="btn btn-secondary" type="submit">Add Review</button></a>
-<a href="/book/add"><button class="btn btn-secondary" type="submit">Book</button></a>
+  <br>
+  <br>
+  <br>
+<a href="/review/add?id=<%=activity._id%>"><button class="btn btn-outline-light login-btn" type="submit">Add Review</button></a>  
+<a href="/book/add"><button class="btn btn-outline-light login-btn" type="submit">Book</button></a>
 <%} %>
 
 <br>
@@ -74,7 +77,7 @@ Place: <%= activity.place %>
       <td><%= moment(review.updatedAt).fromNow() %></td>
       <% if(currentUser){ %>
       <% if(currentUser._id.equals(review.user._id)){ %>
-      <td><a href="/review/edit?id=<%=review._id%>">Edit</a></td>
+      <td><a  href="/review/edit?id=<%=review._id%>">Edit</a></td>
       <td><a href="/review/delete?id=<%= review._id %>">Delete</a></td>
       <%}%>
       <%}%>

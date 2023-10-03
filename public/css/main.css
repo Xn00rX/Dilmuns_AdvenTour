@@ -168,6 +168,17 @@ li :hover{
   padding: 0;
 }
 
+.addbook-body {
+  background-image: url("/images/book-bg.jpg");
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  margin:0;
+  padding: 0;
+  
+
+}
+
 .loginform-container {
   margin-top: 0;
   margin-bottom: 0;
@@ -181,8 +192,26 @@ li :hover{
   object-position: bottom;
 }
 
+.bookform-container{
+   margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  width: 50%;
+  height: 100vh;
+  float: left;
+  object-fit: cover;
+  object-position: bottom;
+  display: flex;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
 .loginform-items {
   width: 450px;
+}
+
+.addbookform-items{
+  width: 400px;
 }
 
 /* ACTIVITES CLIENT SIDE PAGE STYLING STARTS HERE */
