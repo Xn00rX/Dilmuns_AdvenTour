@@ -46,7 +46,7 @@ exports.book_create_post = (req, res) => {
   })
   console.log(req.body.userId)
   book.save().then(() => {
-    res.redirect("/activity/index")
+    res.redirect("/user/detail")
   })
 }
 
@@ -63,7 +63,7 @@ exports.book_index_get = (req, res) => {
 exports.book_delete_get = (req, res) => {
   Book.findByIdAndDelete(req.query.id)
     .then(() => {
-      res.redirect("/book/index")
+      res.redirect(req.get("referer"))
     })
     .catch((err) => {
       console.log(err)
@@ -83,7 +83,7 @@ exports.book_edit_get = (req, res) => {
 exports.book_edit_post = (req, res) => {
   Book.findByIdAndUpdate(req.body.id, req.body)
     .then(() => {
-      res.redirect("/book/index")
+      res.redirect("/user/detail")
     })
     .catch((err) => {
       console.log(err)

@@ -200,8 +200,14 @@ li :hover{
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 900px;
-  height: 900px;
+  width: 970px;
+  height: 770px;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  margin-left: 14%;
 }
 .activites-container {
   width: 300px;
@@ -209,6 +215,10 @@ li :hover{
   font-family: Poppins;
   font-weight: 200;
   color: white;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  justify-content: center;
   
 }
 

@@ -4,7 +4,7 @@
 
 <% activites.forEach(function(activity) { %>
 
-  <div class="shadow-lg p-3 mb-5 bg-body-tertiary form-container activites-container" style="background-image: url(<%= activity.activityImage %>);">
+  <div class="shadow-lg form-container activites-container" style="background-image: url(<%= activity.activityImage %>);">
   
   <a href="/activity/detail?id=<%= activity._id %>">
   <%= activity.actName %> 
