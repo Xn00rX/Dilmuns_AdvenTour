@@ -14,10 +14,11 @@
 
 <body>
 
-
+<div>
+  <nav>
 <ul>
-
   <% if(currentUser){%>
+    <li style="float:left"><a href="/"><img class="logo" src="/images/logo2.png"></a></li>
     <li><a href="/category/all">Categories</a></li>
       <li><a href="/activity/all">Activites</a></li>
     <li><a href="/review/add">Add review</a></li>
@@ -25,6 +26,7 @@
     <li><a href="/user/detail">Profile</a></li>
     <li><a href="/auth/logout">Logout</a></li>
     <%} else{%>
+      <li style="float:left"><a href="/"><img class="logo" src="/images/logo2.png"></a></li>
       <li><a href="/category/all">Categories</a></li>
       <li><a href="/activity/all">Activites</a></li>
       <li><a href="/auth/register">Register</a></li>
@@ -36,15 +38,17 @@
 
 
   </ul>
+  </nav>
+</div>
 
 <br>
 
-<ul>
+<%#<ul>
   <li><a href="/category/index">View Categories</a></li>
   <li><a href="/category/add">Add Category</a></li>
   <li><a href="/activity/index">View Activites</a></li>
   <li><a href="/activity/add">Add Activity</a></li>
-</ul>
+</ul>%>
 
 <br>
 

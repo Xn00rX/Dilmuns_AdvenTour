@@ -35,7 +35,7 @@
 
 <label>categories</label>
 <select name="category[]" multiple="multiple" id="category" class="form-control">
-  <% activity.category.forEach(function(category) { %>
+  <% categories.forEach(function(category) { %>
   <option value="<%= category._id %>"><%= category.catgName %></option>
   <% }) %>
 </select>

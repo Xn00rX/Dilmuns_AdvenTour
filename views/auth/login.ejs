@@ -1,20 +1,25 @@
+<body class="login-body">
 <h1>Login</h1>
 
 <form method="POST" action="/auth/login">
-
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container">
+  <div class="items">
 <div>
   <label> Email</label>
-  <input type="email" name="email">
+  <input class="form-control" type="email" name="email">
 </div>
 
 <div>
+  <br>
   <label> Password</label>
-  <input type="password" name="password">
+  <input class="form-control" type="password" name="password">
 </div>
-
+<br>
 <div>
-  <button type="Submit">Login</button>
+  <button class="btn btn-secondary" type="Submit">Login</button>
 </div>
 
-
+</div>
+</div>
 </form>
+</body>

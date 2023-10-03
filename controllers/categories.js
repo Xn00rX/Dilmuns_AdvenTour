@@ -68,6 +68,7 @@ exports.category_update = (req, res) => {
   Category.findByIdAndUpdate(req.body.id, {
     catgName: req.body.catgName,
     catgDesc: req.body.catgDesc,
+    activity: req.body.activity,
     profileImage: '/uploads/' + req.file.filename
   }).then(() => {
     res.redirect('/category/index')
