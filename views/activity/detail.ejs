@@ -24,7 +24,7 @@
 <strong>Place:</strong><%= activity.place %>
 
 <br>
-
+<input type="hidden" name="activityId" value="<%= activity._id %>">
 <strong> category: </strong>
 
   <% activity.category.forEach((category) => { %>
@@ -34,9 +34,10 @@
 </div>
 </div>
 
-
+<% if(currentUser){ %>
 <a href="/review/add?id=<%=activity._id%>"><button class="btn btn-secondary" type="submit">Add Review</button></a>
 <a href="/book/add"><button class="btn btn-secondary" type="submit">Book</button></a>
+<%} %>
 <hr>
 
 <h1>Reviews</h1>
@@ -57,10 +58,13 @@
       <td><%= review.user.firstName%> <%= review.user.lastName%></td>
       <td><%= review.comment%></td>
       <td><%= moment(review.updatedAt).fromNow() %></td>
+      <% if(currentUser){ %>
       <% if(currentUser._id.equals(review.user._id)){ %>
       <td><a href="/review/edit?id=<%=review._id%>">Edit</a></td>
       <td><a href="/review/delete?id=<%= review._id %>">Delete</a></td>
       <%}%>
+      <%}%>
+
     </tr>
   
   
