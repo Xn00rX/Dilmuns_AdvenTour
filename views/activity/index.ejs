@@ -1,0 +1,40 @@
+<body class="categoryadd-body">
+
+    <br>
+<table class="table">
+<thead class="table-dark">
+<tr>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Description</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Place</th>
+    <th>Category</th>
+    <th> Edit</th>
+    <th> Delete</th>
+</thead>
+</tr>
+
+<% activites.forEach(function(activity) { %>
+
+<tr>
+    <td> <a href="/activity/detail?id=<%= activity._id %>">
+    <%= activity.actName %> </a> </td>
+    <td> <img class="category-icon" src= " <%= activity.activityImage %>" > </td>
+    <td> <%= activity.actDesc %></td>
+    <td> <%= activity.date %></td>
+    <td> <%= activity.time %></td>
+    <td> <%= activity.place %></td>
+    <td> <% activity.category.forEach((category) => { %>
+         <%= category.catgName %> <br>
+         <% }) %></td>
+    <td> <a href="/activity/edit?id=<%= activity._id %>"> Edit </a></td>
+    <td> <a href="/activity/delete?id=<%= activity._id %>"> Delete </a></td> 
+
+</tr>
+
+<% }) %>
+
+</table>
+</body>

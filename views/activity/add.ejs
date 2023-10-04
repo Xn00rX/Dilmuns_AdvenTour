@@ -1,0 +1,68 @@
+<body class="categoryadd-body">
+
+<br>
+
+<form method="POST" action="/activity/add" enctype="multipart/form-data">
+
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded forms-container">
+  <h1> Add Activity </h1>
+  <br>
+<div class="items">
+
+<label>Name</label>
+<input class="form-control" type="text" name="actName" />
+
+<br>
+
+<label>Description</label>
+<textarea class="form-control" name="actDesc"></textarea>
+
+<br>
+
+<label>Date</label>
+<input class="form-control" type="date" name="date">
+
+<br>
+
+<label>Time</label>
+<input class="form-control" type="time" name="time" >
+
+<br>
+
+<label>Place</label>
+<input class="form-control" type="text" name="place" >
+
+<br>
+
+<label>Categories</label>
+<select name="category[]" multiple="multiple" id="category" class="form-control">
+      <% categories.forEach(function(category) { %>
+      <option value="<%= category._id %>"><%= category.catgName %></option>
+      <% }) %>
+</select>
+
+<br>
+
+<label>Governorates</label>
+<select name="Governorates"id="Governorates" class="form-control">
+      <option value="capital">Capital</option>
+      <option value="muharraq">Muharraq</option>
+      <option value="northern">Northern</option>
+      <option value="southern">Southern</option>
+</select>
+
+<br>
+
+<label>Image</label>
+<input class="form-control" type="file" name="activityImage">
+
+<br>
+
+<button class="btn btn-secondary" type="submit">Add Activity</button>
+
+</div>
+</div>
+
+</form>
+
+</body>

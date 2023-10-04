@@ -1,0 +1,44 @@
+<body class="addbook-body">
+  <div class="bookform-container">
+<form method="POST" action="/book/add">
+  <div class="addbookform-items">
+    <h1>Book an Activity</h1>
+    <br>
+
+
+  <div>
+    <label>Name</label>
+    <input class="form-control" type="text" name="bookName">
+  </div>
+  <br>
+  <div>
+    <label>Phone Number</label>
+    <input class="form-control" type="text" name="bookNum">
+  </div>
+  <br>
+  <div>
+    <label>Number of Tickets</label>
+    <input class="form-control" type="text" name="noOfTickets">
+  </div>
+  <br>
+  <div>
+    <label>Select Activity</label>
+    <select class="form-control" name="activity">
+      <% activities.forEach((activity)=>{ %>
+        <option value=<%= activity._id %> ><%= activity.actName %></option>
+      <% }) %>
+    </select>
+  </div>
+
+
+  <input type="hidden" name="userId" value="<%= currentUser._id %>">
+<br>
+  <div>
+    <button class="btn btn-outline-light login-btn" type="submit" name="book">Book</button>
+  </div>
+
+</div>
+</form>
+</div>
+</body>
+

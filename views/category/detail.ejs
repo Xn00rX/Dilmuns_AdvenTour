@@ -1,0 +1,23 @@
+<h1> Category Details</h1>
+
+<br>
+
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container">
+<div class="items">
+
+<strong>Name:</strong><%= category.catgName %>
+
+<br>
+
+<strong>Description:</strong><%= category.catgDesc %>
+
+<br>
+
+<strong> activites: </strong>
+
+<% category.activity.forEach((activity) => { %>
+    <%= activity.actName %>
+  <% }) %>
+
+</div>
+</div>

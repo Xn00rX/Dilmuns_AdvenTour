@@ -1,0 +1,17 @@
+<body class="allcatg-body">
+  <div class="allact-container">
+
+    
+    
+    <% categories.forEach(function(category) { %>
+      <div class="shadow-lg p-3 form-container activites-container" style="background-image: url(<%= category.profileImage %>);">
+      
+      <a href="/category/eachactivity?id=<%= category._id %>"><%= category.catgName %> </a> 
+      
+      
+      </div>
+      
+      <% }) %>
+    </div>
+    </body>
+     
