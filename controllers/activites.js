@@ -46,6 +46,13 @@ exports.activity_all = (req, res) => {
   })
 }
 
+exports.activity_all_map = (req, res) => {
+  Activity.find().then((activites) => {
+    console.log('activites', activites)
+    res.json({ activites })
+  })
+}
+
 exports.activity_show = (req, res) => {
   Activity.findById(req.query.id)
     .populate('category')
@@ -78,7 +85,10 @@ exports.activity_update = (req, res) => {
   Activity.findByIdAndUpdate(req.body.id, {
     actName: req.body.actName,
     actDesc: req.body.actDesc,
-    category: req.body.category,
+    date: req.body.date,
+    time: req.body.time,
+    place: req.body.place,
+    Governorates: req.body.Governorates,
     activityImage: '/uploads/' + req.file.filename
   }).then(() => {
     res.redirect('/activity/index')
@@ -88,5 +98,11 @@ exports.activity_update = (req, res) => {
 exports.activity_delete = (req, res) => {
   Activity.findByIdAndDelete(req.query.id).then(() => {
     res.redirect('/activity/index')
+  })
+}
+
+exports.activity_map = (req, res) => {
+  Activity.find().then((activites) => {
+    res.render('activity/map', { activites })
   })
 }
