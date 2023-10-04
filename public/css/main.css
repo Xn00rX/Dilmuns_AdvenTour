@@ -255,9 +255,13 @@ li :hover{
 
 .allact-container {
   background-image: url("/images/cont-bg.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
   width: 970px;
   height: 770px;
   padding-top: 2%;
@@ -280,6 +284,8 @@ li :hover{
   display: grid;
   justify-content: center;
   text-shadow: 1px 1px 1px grey;
+  text-align: center;
+  
 
   
 }
