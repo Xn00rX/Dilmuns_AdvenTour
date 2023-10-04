@@ -120,11 +120,14 @@ li :hover{
 
 .reg-body {
   background-image: url("/images/reg-bg3.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin:0;
-  padding: 0;
+  
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
 
 .form-container {
@@ -161,21 +164,26 @@ li :hover{
 
 .login-body {
   background-image: url("/images/reg-bg3.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin:0;
-  padding: 0;
+   
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
 
 .addbook-body {
   background-image: url("/images/book-bg.jpg");
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-attachment: fixed;
   background-size: cover;
-  background-position:center;
-  background-repeat: no-repeat;
-  margin:0;
-  padding: 0;
-  
+  background-position: center center;
 
 }
 
@@ -224,14 +232,25 @@ li :hover{
   width: 400px;
 }
 
+.profile-items{
+  width: 550px;
+  
+}
+.profile-table{
+  width: 600px;
+}
 /* ACTIVITES CLIENT SIDE PAGE STYLING STARTS HERE */
 .allact-body {
   background-image: url("/images/act-bg.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin:0;
-  padding: 0;
+  
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+
 }
 
 .allact-container {
@@ -247,6 +266,7 @@ li :hover{
   padding-bottom: 2%;
   text-align: center;
   margin-left: 14%;
+  margin-top: 6%;
 }
 
 .activites-container {
@@ -268,6 +288,7 @@ li :hover{
   color: white;
   font-size: 35px;
   text-decoration: none;
+ 
 }
 
 .activites-container :hover{
@@ -277,17 +298,20 @@ li :hover{
 /* ACTIVITES CLIENT SIDE PAGE STYLING STARTS HERE */
 .actdetails-body {
   background-image: url("/images/actdetails-bg.jpg");
-  background-size:auto;
-  background-repeat:repeat;
-  background-position: center;
-  margin:0;
-  padding: 0;
+  
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
 
 .details-heading {
   width:fit-content;
   display: block;
-  margin-top: 3%;
+  margin-top: 4.5%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -461,11 +485,14 @@ li :hover{
 
 .addrev-body {
   background-image: url("/images/addreview-bg.jpg");
+  
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-attachment: fixed;
   background-size: cover;
-  background-position:center;
-  background-repeat: no-repeat;
-  margin:0;
-  padding: 0;
+  background-position: center center;
 }
 
 .revs-holder {
@@ -475,27 +502,37 @@ li :hover{
 /* USER PROFILE PAGE STYLING STARTS HERE */
 .profile-body{
   background-image: url("/images/act-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-attachment: fixed;
   background-size: cover;
+  background-position: center center;
+
 }
 
 .profileinfo-container{
-margin-top: 0;
+margin-top: 1%;
  margin-bottom: 0;
  color: white;
  background-image: url("/images/cont-bg.jpg");
- background-position: center;
- background-repeat: no-repeat;
+ top: 0px;
+ left: 0px;
+ right: 0px;
+ bottom: 0px;
+ z-index: -1;
+ background-attachment: fixed;
  background-size: cover;
+ background-position: center center;
  width: 50%;
- height: 100vh;
+ height:max-content;
  object-fit: cover;
  object-position: bottom;
  display: flex;
  margin-left: 26%;
  margin-right: 35%;
- padding: 4%;
  font-family: Poppins;
  font-weight: 200;
 }
@@ -510,3 +547,12 @@ margin-top: 0;
  font-size: 32px;
 
 }
+
+.profile-p1{
+  margin-left: 40%;
+}
+
+.profile-p2{
+  margin-left: 40%;
+}
+
