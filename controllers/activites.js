@@ -106,3 +106,19 @@ exports.activity_map = (req, res) => {
     res.render('activity/map', { activites })
   })
 }
+
+exports.activity_all = (req, res) => {
+  const searchActivity = req.query.searchActivity
+  const queryActivity = searchActivity
+    ? { actName: { $regex: searchActivity, $options: 'i' } }
+    : {}
+
+  Activity.find(queryActivity)
+    .populate('actName')
+    .then((activites) => {
+      res.render('activity/all', { activites })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}

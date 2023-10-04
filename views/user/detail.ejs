@@ -1,16 +1,16 @@
 <body class="profile-body">
 <div class="shadow-lg p-3 mb-5 rounded profileinfo-container">
-<div class="addbookform-items">
+<div class="profile-items">
   <div class="profile-h1">Profile
     <br>
     <br>
   </div>
-
+<div class="profile-p1">
 <div> <img class="profile-pic" src= " <%= currentUser.userImage %>" >  </div>
 <br>
-<br>
+<br> </div>
 
-
+<div class="profile-p1">
 <div>
   First Name:  <%= currentUser.firstName %>
 </div>
@@ -27,15 +27,19 @@
 
 <br>
   <button class="btn btn-outline-light login-btn">  <a href="/user/edit">Edit Profile</a> </button>
+  <br>
+  <br>
   <button class="btn btn-outline-light login-btn"> <a href="/user/changepassword">Change Password</a> </button>
+</div>
+ 
 <br> 
 <br>
-<hr>
+
 
 <div class="profile-h1">Bookings</div>
 <br>
 
-<table class="table-bordered">
+<table class="table-bordered profile-table">
 
 <tr>
   <th>Name</th>
