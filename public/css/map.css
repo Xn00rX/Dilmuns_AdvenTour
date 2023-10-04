@@ -1,9 +1,13 @@
 
 
 /* Container needed to position the button. Adjust the width as needed */
+
+h1{
+  color: aqua;
+}
 .container {
   position: relative;
-  width: 50%;
+  width: 40%;
 }
 
 /* Make the image responsive */
@@ -13,7 +17,7 @@
 }
 
 /* Style the button and place it in the middle of the container/image */
-.container .btn {
+ .southern {
   position: absolute;
   top: 45%;
   left: 44%;
@@ -28,8 +32,65 @@
   border-radius: 5px;
 }
 
-.container .btn:hover {
+.capital {
+  position: absolute;
+  top: 17%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.northern {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.muharraq {
+  position: absolute;
+  top: 11%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+.container .southern:hover .capital:hover .muharraq:hover .northern:hover {
   background-color: black;
 }
 
 
+.background{
+  background-color: aqua;
+}
+
+.pic{
+  width: 50%;
+  height: 10%;
+}

@@ -83,6 +83,10 @@ exports.activity_update = (req, res) => {
   Activity.findByIdAndUpdate(req.body.id, {
     actName: req.body.actName,
     actDesc: req.body.actDesc,
+    date: req.body.date,
+    time: req.body.time,
+    place: req.body.place,
+    Governorates: req.body.Governorates,
     activityImage: "/uploads/" + req.file.filename,
   }).then(() => {
     res.redirect("/activity/index")
