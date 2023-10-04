@@ -1,16 +1,22 @@
-
-
 /* Container needed to position the button. Adjust the width as needed */
-
+.map-page {
+  background-image: url("/images/act-bg.jpg");
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 40% 60% ;
-  background-color: #2196F3;
+  
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color:  rgba(0, 0, 0, 0.7);
   padding: 20px;
   font-size: 30px;
   text-align: center;
@@ -35,28 +41,28 @@
   left: 44%;
   /* transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); */
-  background-color: #555;
   color: white;
   font-size: 12px;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 40%;
+  background-color: mediumturquoise;
 }
 
 .capital {
   position: absolute;
   top: 17%;
   left: 47%;
+  color: white;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
   font-size: 12px;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 40%;
+  background-color: mediumturquoise;
+
+  
 }
 
 
@@ -66,13 +72,13 @@
   left: 25%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
   color: white;
   font-size: 12px;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 40%;
+  background-color: mediumturquoise;
+
 }
 
 
@@ -82,31 +88,63 @@
   left: 65%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
   color: white;
   font-size: 12px;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 40%;
+  background-color: mediumturquoise;
+
 }
 
 
 
 .container .southern:hover .capital:hover .muharraq:hover .northern:hover {
   background-color: black;
+  background-color: mediumturquoise;
+
 }
 
 
 .background{
-  background-color: aqua;
+  background-color: mediumturquoise;
+
 }
 
 .imgDiv{
 background-repeat: no-repeat;
 background-position: center;
 /* background-size: cover; */
-background-size: contain;
-width: auto;
-height: auto;
+background-size: cover;
+width: 400px;
+height: 125px;
+font-family: Poppins;
+font-weight: 600;
+margin-left: 22%;
+border: 1px ;
+margin-bottom: 1%;
+margin-top: 6%;
+border-radius: 13px;
+}
+
+.imgDiv a{
+  color: white;
+  text-decoration: none;
+}
+
+.imgDiv:hover{
+  text-decoration: underline;
+  text-decoration-color: mediumturquoise;
+}
+
+.map-h1{
+  font-family: Poppins;
+  font-weight: 600;
+  color: mediumturquoise;
+  font-size: 40px;
+  width: 380px;
+  margin-left: 24%;
+  margin-top: 6%;
+
+  
 }

@@ -28,7 +28,7 @@ exports.auth_register_post = (req, res) => {
   user
     .save()
     .then(() => {
-      res.redirect("/category/index")
+      res.redirect("/auth/login")
     })
     .catch((err) => {
       console.log(err)
