@@ -18,3 +18,4 @@ Trello Board [Click Here](https://trello.com/b/lqVAmdB4/dilmuns-adventour)
 ## Credits
 https://www.npmjs.com/package/multer?activeTab=readme
 https://www.youtube.com/watch?v=WqJ0P8JnftI&t=616s
+https://www.w3schools.com/css/css_navbar_horizontal.asp

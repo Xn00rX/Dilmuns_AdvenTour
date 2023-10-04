@@ -1,46 +1,399 @@
-body {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-left: 200px;
-  padding-right: 200px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Spinnaker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/* HOMEPAGE STYLING STARTS HERE */
+
+.background-clip {
+  position:absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+
+}
+
+@media (min-aspect-ratio:16/9) {
+  .background-clip{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio:16/9) {
+  .background-clip{
+    width: auto;
+    height: 100%;
+  }
+}
+
+.video-containter {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.home-content {
+  margin-top: 7%;
+  text-align: center;
+}
+
+.home-content h1 {
+  font-family: Poppins;
+  font-weight: 600;
+  color: white;
+  font-size: 70px;
+
+}
+
+nav .logo {
+  width: 300px;
+
+
+}
+nav {
+  margin-bottom: 0;
+}
+
+.home-btn {
+  font-family: Poppins;
+  font-weight: 200;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border: 2px solid #fff;
+  padding: 12px 36px;
+  border-radius: 50px;
+  margin-top: 20px;
+
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 3%;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 0;
+
+}
+
+li {
+  float:right;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-family: Poppins;
+  font-weight: 250;
+  text-align: center;
+  font-size: 20px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px grey;
+}
+
+li :hover{
+  text-decoration: underline;
+}
+/* HOMEPAGE STYLING ENDS HERE */
+
+/* REGISTER PAGE STYLING STARTS HERE */
+
+.reg-btn {
+  font-family: Poppins;
+  font-weight: 200;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #fff;
+  padding: 9px 33px;
+  border-radius: 47px;
+
+}
+
+.reg-body {
+  background-image: url("/images/reg-bg3.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin:0;
+  padding: 0;
+}
+
+.form-container {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: grid;
+  color: white;
+  width: 50%;
+  height: 100vh;
+  float: left;
+  object-fit: cover;
+  padding-left: 5%;
+  object-position: bottom;
+}
+
+.form-items {
+  width: 450px;
+}
+
+/* Login PAGE STYLING STARTS HERE */
+
+.login-btn {
+  font-family: Poppins;
+  font-weight: 200;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #fff;
+  padding: 9px 33px;
+  border-radius: 47px;
+
+}
+
+.login-body {
+  background-image: url("/images/reg-bg3.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin:0;
+  padding: 0;
+}
+
+.addbook-body {
+  background-image: url("/images/book-bg.jpg");
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  margin:0;
+  padding: 0;
+  
+
+}
+
+
+
+.rev-h1{
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+
+.loginform-container {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: grid;
+  color: white;
+  width: 50%;
+  height: 100vh;
+  float: left;
+  object-fit: cover;
+  padding-left: 5%;
+  object-position: bottom;
+}
+
+.bookform-container{
+   margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  width: 50%;
+  height: 100vh;
+  float: left;
+  object-fit: cover;
+  object-position: bottom;
+  display: flex;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+
+.loginform-items {
+  width: 450px;
+}
+
+.addbookform-items{
+  width: 400px;
+}
+
+/* ACTIVITES CLIENT SIDE PAGE STYLING STARTS HERE */
+.allact-body {
+  background-image: url("/images/act-bg.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin:0;
+  padding: 0;
+}
+
+.allact-container {
+  background-image: url("/images/cont-bg.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 970px;
+  height: 770px;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  margin-left: 14%;
+}
+
+.activites-container {
+  width: 300px;
+  height: 300px;
+  font-family: Poppins;
+  font-weight: 600;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  justify-content: center;
+  text-shadow: 1px 1px 1px grey;
+
+  
+}
+
+.activites-container a {
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+.activites-container :hover{
+  text-decoration: underline;
+}
+
+/* ACTIVITES CLIENT SIDE PAGE STYLING STARTS HERE */
+.actdetails-body {
+  background-image: url("/images/actdetails-bg.jpg");
+  background-size:auto;
+  background-repeat:repeat;
+  background-position: center;
+  margin:0;
+  padding: 0;
+}
+
+.details-heading {
+  width:fit-content;
+  display: block;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details-heading h1 {
+  color: white;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 70px;
+  text-align: center;
+  
+ 
+}
+
+.actdetails-container {
+  background-color: #032540;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 85%;
+  height: 90%;
+  text-align: left;
+  margin-top: 3.5%;
+  margin-left: 7%;
+  margin-right: 5%;
+  padding: 10%;
+
+ 
+}
+.name-comment {
+  font-weight: 600;
+}
+
+.comment-time {
+  float: right;
+}
+
+.act-name {
+  font-family: Poppins;
+  color: white;
+  font-weight: 600;
+  font-size: 26px;
+  text-decoration: underline;
+  text-decoration-color:mediumturquoise;
+
+}
+
+.act-review {
+  font-family: Poppins;
+  color: white;
+  font-weight: 600;
+  font-size: 26px;
+
+}
+
+.act-description{
+  font-family: Poppins;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+
+}
+
+.activity-info{
+  font-family: Poppins;
+  font-weight: 200;
+  color: lightgray;
+  font-size: 15px;
+}
+
+.actdetails-items {
+  color: #fff;
+
+}
+
+.activity-container {
+  width: 35%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 8%;
+
+  
+}
+
+/* ADMIN SIDE VIEWS STYLING STARTS HERE */
+.categoryadd-body{
+  
+  background-color: #111;
+}
+
+.forms-container {
+  margin-top: 2%;
+  margin-bottom: 0;
+  color: black;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
 }
 
 .btn a {
   text-decoration: none;
   color: white;
   }
-
-.form-container {
-  margin-top: 0;
-  margin-bottom: 0;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-}
-
-.items {
-  align-self: stretch;
-  width: 550px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
-  font-family: arial;
-  font-weight: bold;
-  background-color: #212529;
-}
-
-
-li a {
-  display: block;
-  float: left;
-  padding: 15px 15px;
-  color: white;
-  text-decoration: none;
-}
 
 .category-cont {
   width: 1000px;
@@ -60,3 +413,100 @@ li a {
   height: 50px;
 }
 
+.profile-pic {
+  width: 200px;
+  height: 200px;
+}
+
+
+
+.admin-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.admin-nav li {
+  float: right;
+}
+
+.admin-nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.admin-nav li a:hover {
+  background-color: #111;
+}
+
+.addrev-contbg{
+  background-image: url("/images/cont-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  padding: 2%;
+  height: 30%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  justify-content: center;
+
+}
+
+.addrev-body {
+  background-image: url("/images/addreview-bg.jpg");
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  margin:0;
+  padding: 0;
+}
+
+.revs-holder {
+  margin-top: 30%;
+}
+
+/* USER PROFILE PAGE STYLING STARTS HERE */
+.profile-body{
+  background-image: url("/images/act-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profileinfo-container{
+margin-top: 0;
+ margin-bottom: 0;
+ color: white;
+ background-image: url("/images/cont-bg.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ width: 50%;
+ height: 100vh;
+ object-fit: cover;
+ object-position: bottom;
+ display: flex;
+ margin-left: 26%;
+ margin-right: 35%;
+ padding: 4%;
+ font-family: Poppins;
+ font-weight: 200;
+}
+.profileinfo-container button :hover{
+  color: black;
+}
+
+
+.profile-h1{
+ color: white;
+ font-weight: 600;
+ font-size: 32px;
+
+}
