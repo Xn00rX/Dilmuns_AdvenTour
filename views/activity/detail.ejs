@@ -1,6 +1,6 @@
 <body class="actdetails-body">
 
- <div class="details-heading"><h1>Sky is the limit when it comes to AdvenTours</h1></div>
+ <div class="details-heading"><h1>" Sky is the limit when it comes to AdvenTours "</h1></div>
 
 <br>
 
@@ -46,20 +46,9 @@ Place: <%= activity.place %>
 <a href="/book/add"><button class="btn btn-outline-light login-btn" type="submit">Book</button></a>
 <%} %>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+<div class="revs-holder">
 <hr>
 
 <div class="act-review">Reviews</div>
@@ -71,13 +60,16 @@ Place: <%= activity.place %>
   <% reviews.forEach((review) => { %>
   
     <tr>
-      <td><div class="name-comment"> <%= review.user.firstName%> <%= review.user.lastName%></div> <br><%= review.comment%></td>
+      <td><div class="name-comment"> <%= review.user.firstName%> <%= review.user.lastName%></div> <%= review.comment%></td>
       
-      <td class="comment-time">  &nbsp; &nbsp;| &nbsp; &nbsp;  <%= moment(review.updatedAt).fromNow() %></td>
+      <td class="comment-time">&nbsp; &nbsp;| &nbsp; &nbsp;<%= moment(review.updatedAt).fromNow() %></td>
+      
       <% if(currentUser){ %>
       <% if(currentUser._id.equals(review.user._id)){ %>
-      <td><a  href="/review/edit?id=<%=review._id%>">Edit</a></td>
-      <td><a href="/review/delete?id=<%= review._id %>">Delete</a></td>
+        
+      
+      <td><a  href="/review/edit?id=<%=review._id%>">Edit</a>&nbsp; &nbsp;<a href="/review/delete?id=<%= review._id %>">Delete</a> </td>
+    
       <%}%>
       <%}%>
       
@@ -91,6 +83,8 @@ Place: <%= activity.place %>
 </div>
 </div>
 </div>
+</div>
+
 
 
 </body>

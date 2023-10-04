@@ -179,6 +179,15 @@ li :hover{
 
 }
 
+
+
+.rev-h1{
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+
 .loginform-container {
   margin-top: 0;
   margin-bottom: 0;
@@ -205,6 +214,7 @@ li :hover{
   margin-left: 35%;
   margin-right: 35%;
 }
+
 
 .loginform-items {
   width: 450px;
@@ -238,22 +248,25 @@ li :hover{
   text-align: center;
   margin-left: 14%;
 }
+
 .activites-container {
   width: 300px;
   height: 300px;
   font-family: Poppins;
-  font-weight: 200;
+  font-weight: 600;
   color: white;
   background-size: cover;
   background-position: center;
   display: grid;
   justify-content: center;
+  text-shadow: 1px 1px 1px grey;
+
   
 }
 
 .activites-container a {
   color: white;
-  font-size: 44px;
+  font-size: 35px;
   text-decoration: none;
 }
 
@@ -272,8 +285,9 @@ li :hover{
 }
 
 .details-heading {
-  width: 65%;
+  width:fit-content;
   display: block;
+  margin-top: 3%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -283,6 +297,7 @@ li :hover{
   font-family: Poppins;
   font-weight: 600;
   font-size: 70px;
+  text-align: center;
   
  
 }
@@ -294,7 +309,7 @@ li :hover{
   width: 85%;
   height: 90%;
   text-align: left;
-  margin-top: 5%;
+  margin-top: 3.5%;
   margin-left: 7%;
   margin-right: 5%;
   padding: 10%;
@@ -349,13 +364,16 @@ li :hover{
 
 .activity-container {
   width: 35%;
-  height: 75%;
+  height: 60%;
   background-size: cover;
   background-position: center;
   margin-right: 8%;
 
   
 }
+
+/* ADD REVIEW PAGE STYLING STARTS HERE */
+
 
 /* ADMIN SIDE VIEWS STYLING STARTS HERE */
 .categoryadd-body{
@@ -424,3 +442,30 @@ li :hover{
   background-color: #111;
 }
 
+.addrev-contbg{
+  background-image: url("/images/cont-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  padding: 2%;
+  height: 30%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  justify-content: center;
+
+}
+
+.addrev-body {
+  background-image: url("/images/addreview-bg.jpg");
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  margin:0;
+  padding: 0;
+}
+
+.revs-holder {
+  margin-top: 30%;
+}
