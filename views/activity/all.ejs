@@ -1,11 +1,18 @@
+<form method="GET" action="/activity/all">
+
+<input type="text" name="searchActivity" placeholder="Search Activity">
+
+<button type="submit">Search</button>
+</form>
+
+<% if(activites && activites.length > 0) { %>
 <% activites.forEach(function(activity) { %>
 
   <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded form-container category-cont" style="background-image: url(<%= activity.activityImage %>);">
   
-  <a href="/activity/detail?id=<%= activity._id %>">
-  <%= activity.actName %> 
+  <a href="/activity/detail?id=<%= activity._id %>"><%= activity.actName %> 
   
   
   </div>
   
-  <% }) %>
+  <% })} %>
