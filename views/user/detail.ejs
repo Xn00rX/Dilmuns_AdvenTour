@@ -1,30 +1,39 @@
-<h1>Profile</h1>
+<body class="profile-body">
+<div class="shadow-lg p-3 mb-5 rounded profileinfo-container">
+<div class="addbookform-items">
+  <div class="profile-h1">Profile
+    <br>
+    <br>
+  </div>
 
-<div>
-  First Name: <%= currentUser.firstName %>
-</div>
-<div>
-  Last Name: <%= currentUser.lastName %>
-</div>
-<div>
-  Phone Number: <%= currentUser.phoneNumber %>
-</div>
-<div>
-  email: <%= currentUser.email %>
-</div>
-
-<div> Image: <img class="category-icon" src= " <%= currentUser.userImage %>" >  </div>
+<div> <img class="profile-pic" src= " <%= currentUser.userImage %>" >  </div>
+<br>
+<br>
 
 
-<nav>
-  <a href="/user/edit">Edit Profile</a>
-  <a href="/user/changepassword">Change Password</a>
-</nav>
+<div>
+  First Name:  <%= currentUser.firstName %>
+</div>
+<div>
+  Last Name:  <%= currentUser.lastName %>
+</div>
+<div>
+  Phone Number:  <%= currentUser.phoneNumber %>
+</div>
+<div>
+  Email:  <%= currentUser.email %>
+</div>
+
+
+<br>
+  <button class="btn btn-outline-light login-btn">  <a href="/user/edit">Edit Profile</a> </button>
+  <button class="btn btn-outline-light login-btn"> <a href="/user/changepassword">Change Password</a> </button>
+
 
 <hr>
 
 
-<h1>Books</h1>
+<h2>Bookings</h2>
 
 <table>
 
@@ -53,3 +62,6 @@
 <%}) %>
 
 </table>
+</div>
+</div>
+</body>

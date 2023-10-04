@@ -1,20 +1,30 @@
-<h1>Add Review</h1>
+<body class="addrev-body">
+ 
+  <div class="bookform-container addrev-contbg">
+    <form method="POST" action="/review/add">
+      <div class="addbookform-items">
 
-<form method="POST" action="/review/add">
+<div class="rev-h1"> Add Review</div>
+<br>
 
   <div>
     <label>Comment</label>
-    <textarea name="comment"></textarea>
+    <br>
+    
+    <textarea class="form-control" name="comment"></textarea>
   </div>
+  <br>
 
   <input type='hidden' name="activityId" value="<%= activityId %>">
   <input type="hidden" name="userId" value="<%= currentUser._id %>">
 
 
-
   <div>
-    <button type="submit" name="review">Add
+    <button class="btn btn-outline-light login-btn" type="submit" name="review">Add
     </button>
   </div>
-</form>
 
+</div>  
+</form>
+</div>
+</body>
