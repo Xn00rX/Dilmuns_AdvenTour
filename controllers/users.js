@@ -1,7 +1,6 @@
 const User = require("../models/User")
 const Book = require("../models/Book")
 const bcrypt = require("bcryptjs")
-const passport = require("../helper/ppConfig")
 const salt = 10
 
 //Load Current User Data - HTTP GET

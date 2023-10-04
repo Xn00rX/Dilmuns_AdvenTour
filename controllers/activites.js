@@ -46,6 +46,13 @@ exports.activity_all = (req, res) => {
   })
 }
 
+exports.activity_all_map = (req, res) => {
+  Activity.find().then((activites) => {
+    console.log("activites", activites)
+    res.json({ activites })
+  })
+}
+
 exports.activity_show = (req, res) => {
   Activity.findById(req.query.id)
     .populate("category")
@@ -85,5 +92,11 @@ exports.activity_update = (req, res) => {
 exports.activity_delete = (req, res) => {
   Activity.findByIdAndDelete(req.query.id).then(() => {
     res.redirect("/activity/index")
+  })
+}
+
+exports.activity_map = (req, res) => {
+  Activity.find().then((activites) => {
+    res.render("activity/map", { activites })
   })
 }
