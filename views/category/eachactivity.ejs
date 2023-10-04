@@ -2,7 +2,7 @@
   <div class="allact-container">
 <% category.activity.forEach((activity) => { %>
 
-<div class="shadow-lg p-3 form-container activites-container">
+<div class="shadow-lg p-3 form-container activites-container" style="background-image: url(<%= activity.activityImage %>);">
 <a href="/activity/detail?id=<%= activity._id %>">
 
 <%= activity.actName %></a>

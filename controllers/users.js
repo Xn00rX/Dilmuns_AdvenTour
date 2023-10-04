@@ -5,27 +5,6 @@ const salt = 10
 
 //Load Current User Data - HTTP GET
 exports.user_show_get = async (req, res) => {
-  // console.log(req.user)
-  // console.log(req.user._id)
-  ////////////////////////////////
-  // User.find({ id: User._id })
-  //   .then((user) => {
-  //     res.render('user/detail', { user })
-  //   })
-  //   .catch((err) => {
-  //     console.log(err)
-  //   })
-
-  // User.find({ id: User._id }).then((user) => {
-  //   Book.find({ book: req.body.user }) // add the condition here
-  //     .then((books) => {
-  //       res.render("user/detail", { user, books })
-  //     })
-  //     .catch((err) => {
-  //       console.log(err)
-  //     })
-  // })
-
   try {
     const books = await Book.find({ user: req.user._id })
       .populate("user")
@@ -77,10 +56,9 @@ exports.user_changepass_get = async (req, res) => {
 //Apply Password Change
 exports.user_updatepassword_post = async (req, res) => {
   let hash = bcrypt.hashSync(req.body.password, salt)
-  // console.log(hash)
-  // console.log("Password changed successfully, please re-login", req.user)
+
   const user = await User.findByIdAndUpdate(req.user, { password: hash })
-  // res.redirect("/")
+
   req.logout(function (err) {
     if (err) {
       return next(err)
