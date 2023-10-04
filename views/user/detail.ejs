@@ -47,7 +47,7 @@
   <th>Number Of Tickets</th>
   <th>Activity</th>
   <th>Edit</th>
-  <th>Delete</th>
+  <th>Cancel</th>
 </tr>  
 
 <%books.forEach((book)=>{%>
@@ -60,7 +60,7 @@
       <%= book.activity.actName %>
     </td>
     <td><a href="/book/edit?id=<%=book._id%>">Edit</a></td>
-    <td><a href="/book/delete?id=<%= book._id %>">Delete</a></td>
+    <td><a href="/book/delete?id=<%= book._id %>">Cancel</a></td>
   </tr>
  
 <%}) %>
