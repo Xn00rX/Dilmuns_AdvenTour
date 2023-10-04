@@ -1,12 +1,15 @@
 <body class="allact-body">
+
   <div class="allact-container">
+    <form method="GET" action="/activity/all">
 
-<form method="GET" action="/activity/all">
+      <input class="btn btn-outline-light login-btn" type="text" name="searchActivity" placeholder="Search Activity">
+      
+      <button class="btn btn-outline-light login-btn" type="submit">Search</button>
+      <br>
+      <br>
+      </form>
 
-<input type="text" name="searchActivity" placeholder="Search Activity">
-
-<button type="submit">Search</button>
-</form>
 
 <% if(activites && activites.length > 0) { %>
 
@@ -14,7 +17,7 @@
 <% activites.forEach(function(activity) { %>
   <div class="shadow-lg p-3 form-container activites-container" style="background-image: url(<%= activity.activityImage %>);">
   
-  <a href="/activity/detail?id=<%= activity._id %>"><%= activity.actName %> 
+  <a href="/activity/detail?id=<%= activity._id %>"><%= activity.actName %> </a> 
   
   
   </div>
