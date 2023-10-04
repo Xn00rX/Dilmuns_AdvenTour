@@ -8,6 +8,7 @@ const activitySchema = mongoose.Schema({
   time: String,
   place: String,
   activityImage: String,
+  Governorates: String,
   category: [
     {
       type: mongoose.Schema.Types.ObjectId,
