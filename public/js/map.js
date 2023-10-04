@@ -16,19 +16,42 @@ B.forEach((element) => {
             if (activity.Governorates === "muharraq") {
               const d = document.createElement("div")
               const title = document.createElement("h3")
+
+              let theCounter = `localhost:4000/activity/detail?id=${activity._id}`
+              /////////////////////////////////
+              // var createA = document.createElement("a")
+              // var createAText = document.createTextNode(theCounter)
+              // createAText.setAttribute(
+              //   `localhost:4000/activity/detail?id=${activity._id}`
+              // )
+              // createA.appendChild(createAText)
+              ///////////////////////////////////////////////
+              var createA = document.createElement("a")
+              var createAText = document.createTextNode(`${activity.actName}`)
+              createA.setAttribute(
+                "href",
+                `http://localhost:4000/activity/detail?id=${activity._id}`
+              )
+              createA.appendChild(createAText)
+              // getTheTableTag.appendChild(createA)
+              /////////////////////////////////////
+              // const a = document.createElement("a")
+              // const atext = document.createTextNode(pageurl)
+
               const text = document.createTextNode(`${activity.actName}`)
-              title.appendChild(text)
-
-              const img = document.createElement("div")
-              img.classList = "pic"
-              const pic = document.createTextNode(`he`)
-              img.style.backgroundImage =
+              // title.appendChild(text)
+              // const page = document.URL
+              const imgDiv = document.createElement("div")
+              imgDiv.classList = "imgDiv"
+              // const pic = document.createTextNode(`he`)
+              imgDiv.style.backgroundImage =
                 "url('" + activity.activityImage + "')"
+              // img.appendChild(pic)
+              // img.appendChild(text)
+              imgDiv.appendChild(createA)
+              d.appendChild(imgDiv)
 
-              img.appendChild(pic)
-              d.appendChild(img)
-
-              d.appendChild(title)
+              // d.appendChild(title)
               document.querySelector("#acti").appendChild(d)
             }
           })

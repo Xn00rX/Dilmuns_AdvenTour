@@ -2,34 +2,45 @@
 
 /* Container needed to position the button. Adjust the width as needed */
 
-h1{
-  color: aqua;
+.grid-container {
+  display: grid;
+  grid-template-columns: 40% 60% ;
+  background-color: #2196F3;
 }
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
 .container {
   position: relative;
-  width: 40%;
+  width: 60%;
 }
 
 /* Make the image responsive */
-.container img {
+.container .mappic {
   width: 100%;
   height: auto;
 }
 
-/* Style the button and place it in the middle of the container/image */
+/* Style the buttons and place them in the right place on the image */
  .southern {
   position: absolute;
   top: 45%;
   left: 44%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
   background-color: #555;
   color: white;
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 12px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 40%;
 }
 
 .capital {
@@ -40,43 +51,43 @@ h1{
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
   color: white;
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 12px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 40%;
 }
 
 
 .northern {
   position: absolute;
-  top: 20%;
-  left: 30%;
+  top: 16%;
+  left: 25%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
   color: white;
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 12px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 40%;
 }
 
 
 .muharraq {
   position: absolute;
   top: 11%;
-  left: 63%;
+  left: 65%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
   color: white;
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 12px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 40%;
 }
 
 
@@ -90,7 +101,11 @@ h1{
   background-color: aqua;
 }
 
-.pic{
-  width: 50%;
-  height: 10%;
+.imgDiv{
+background-repeat: no-repeat;
+background-position: center;
+/* background-size: cover; */
+background-size: contain;
+width: auto;
+height: auto;
 }
