@@ -27,13 +27,11 @@ const activityCtrl = require("../controllers/activites")
 
 //routes
 router.get("/activity/add", activityCtrl.activity_create)
-//router.post('/activity/add', activityCtrl.activity_post)
 router.get("/activity/index", activityCtrl.activity_index)
 router.get("/activity/all", activityCtrl.activity_all)
 router.get("/activity/allMap", activityCtrl.activity_all_map)
 router.get("/activity/detail", activityCtrl.activity_show)
 router.get("/activity/edit", activityCtrl.activity_edit)
-//router.put('/activity/update', activityCtrl.activity_update)
 router.get("/activity/delete", activityCtrl.activity_delete)
 
 //upload and update picture new routes

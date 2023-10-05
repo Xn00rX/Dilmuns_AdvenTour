@@ -4,17 +4,6 @@ const User = require("../models/User")
 
 const moment = require("moment")
 
-// exports.book_create_get = (req, res) => {
-//   Activity.find()
-//   User.find({ userId: User._id })
-//     .then((user) => {
-//       res.render("book/add", { user, activites })
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//     })
-// }
-
 exports.book_create_get = async (req, res) => {
   try {
     let activities = await Activity.find()
@@ -26,17 +15,6 @@ exports.book_create_get = async (req, res) => {
 }
 
 exports.book_create_post = (req, res) => {
-  // let book = new Book(req.body)
-  // book
-  //   .save()
-  //   .then(() => {
-  //     res.redirect("/book/index")
-  //   })
-  //   .catch((err) => {
-  //     console.log(err)
-  //     res.send("Please try again later")
-  //   })
-
   let book = new Book({
     bookName: req.body.bookName,
     bookNum: req.body.bookNum,
@@ -44,7 +22,7 @@ exports.book_create_post = (req, res) => {
     activity: req.body.activity,
     user: req.body.userId,
   })
-  console.log(req.body.userId)
+
   book.save().then(() => {
     res.redirect("/user/detail")
   })

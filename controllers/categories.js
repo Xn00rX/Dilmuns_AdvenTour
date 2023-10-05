@@ -7,12 +7,8 @@ exports.category_create = (req, res) => {
 }
 
 exports.category_post = (req, res) => {
-  console.log(req.body)
-  console.log(req.file)
-
   let categories = new Category(req.body)
   categories.profileImage = "/uploads/" + req.file.filename
-  console.log("category.profileImage")
 
   categories.save().then(() => {
     res.redirect("/category/index")
@@ -58,13 +54,10 @@ exports.category_delete = (req, res) => {
 exports.category_edit = (req, res) => {
   Category.findById(req.query.id).then((category) => {
     res.render("category/edit", { category })
-    console.log(req.query.id)
   })
 }
 
 exports.category_update = (req, res) => {
-  console.log(req.body)
-  console.log(req.file)
   Category.findByIdAndUpdate(req.body.id, {
     catgName: req.body.catgName,
     catgDesc: req.body.catgDesc,
