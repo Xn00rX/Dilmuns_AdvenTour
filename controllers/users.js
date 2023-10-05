@@ -28,9 +28,6 @@ exports.user_edit_get = (req, res) => {
 
 //Apply Changes - HTTP POST
 exports.user_update_post = (req, res) => {
-  console.log(req.body)
-  console.log(req.file)
-
   User.findByIdAndUpdate(req.body.id, {
     userImage: "/uploads/" + req.file.filename,
     firstName: req.body.firstName,
