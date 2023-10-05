@@ -5,7 +5,7 @@ Created by Noor Nasser, Sayed Ebrahim Ali, Amira Zahid.
 ## Entity Relationship Diagram (ERD)
 ![ERD](https://media.git.generalassemb.ly/user/50365/files/b85dd1bb-ae3b-4c83-bae9-c584960f1597)
 
-<!-- *wait for Noors Updates* -->
+
 
 
 ## Trello
@@ -58,7 +58,6 @@ Logged in Users can navigate the website and do the following:
 
 When Standard users login, clicking the button on the homepage directs them to our bonus feature: the map.
 
-<!-- Map Screenshot -->
 
 ## Booking
 Users can **Book** their activity upon clicking on one, **Or** clicking the "Book" button on the navigation bar. which then, users will be directed to the booking page.
@@ -72,7 +71,6 @@ To add more about what was mentioned above about Standard Users, newly booked ac
 
 ![Booked activities in profile page]()
 
-<!-- insert profile page with booked activities screenshot above -->
 
 ## Future Enhancements
 
